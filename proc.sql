@@ -76,7 +76,7 @@ BEGIN
                 INSERT INTO #AvailableSlots (PatternID, StartTime, EndTime)
                 VALUES (NULL, NULL, NULL); -- nếu bị overwrite
             END
-    select * from #AvailableSlots
+
     -- dữ liệu sẽ có kiểu như sau
     -- "PatternID": 1,
     -- "StartTime": "09:00:00",
