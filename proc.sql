@@ -100,7 +100,7 @@ BEGIN
             WHILE @NextStartTime < @EndTime
                 BEGIN
                     DECLARE @NextEndTime TIME = DATEADD(MINUTE, @Length, @NextStartTime);
-                    IF @NextEndTime > @EndTime SET @NextEndTime = @EndTime;
+                    IF @NextEndTime > @EndTime SET @NextEndTime = @EndTime; -- phòng trường hợp NextEndTime lớn hơn endtime kiến cho khoảng chia vượt giới hạn endtime
 
                     INSERT INTO #DividedSlots (StartTime, EndTime)
                     VALUES (@NextStartTime, @NextEndTime);
