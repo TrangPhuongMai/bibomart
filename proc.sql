@@ -72,7 +72,7 @@ BEGIN
     ELSE
         IF @IsOverride = 1
             BEGIN
-                -- Date is an available override, assuming all day is available, this will need to be adjusted based on actual available times
+            -- đoạn này cố tình viết thừa đê sau này có thể add defalse values nếu muốn -- xóa đi cũng đc
                 INSERT INTO #AvailableSlots (PatternID, StartTime, EndTime)
                 VALUES (NULL, NULL, NULL); -- nếu bị overwrite
             END
